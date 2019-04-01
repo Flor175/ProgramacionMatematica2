@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if documentos %}
+    <ul>
+        {% for document in documentos %}
+            <li><a src="{{MEDIA_URL}}{{ document.docfile.name }}">document</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No documents.</p>
+    {% endif %}
+{% endblock %}

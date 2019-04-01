@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Practica 1{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mi sitio</h1>
+        <a href="{% url 'inicio' %}">login</a> / <a href="{% url 'registro' %}">signup</a>
+      <hr>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>

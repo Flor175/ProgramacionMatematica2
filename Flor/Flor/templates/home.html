@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+   <p><a href="{% url 'subida_archivos' %}">Upload_file</a></p> 
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'inicio' %}">login</a> |
+  <a href="{% url 'registro' %}">signup</a>
+  <a href="{% url 'logout' %}">logout</a>
+{% endif %}
+{% endblock %}
