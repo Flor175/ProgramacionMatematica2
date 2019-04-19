@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <style>
+      html {
+          background-image: url( "{% static 'images/bg-01.jpg' %}" );
+      }
+      title {
+              font-size: 14px;
+              color:black;
+              font:larger;
+              font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      }
+      p {
+          font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+          color: black;
+          font:normal;
+      }
+        .entero {
+            color: blue;
+        }
+        .real {
+            color:darkgreen;
+        }
+        .notacion {
+            color:blueviolet;
+        }
+        .complejo {
+            color:red;
+        }
+        .reservada {
+            color:gray;
+        }
+        .palabra {
+            color:black;
+        }
+        .fecha {
+            color:rgba(245, 94, 7, 0.808);
+        }
+      h1{
+        font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color:rgb(62, 54, 63);
+        margin-left: 10%;
+        margin-top: 2%;
+      }
+      h2 {
+        font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color:rgb(62, 54, 63);
+        margin-left: 38%;
+        margin-top: 5%;
+      }
+      h3 {
+        font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color:rgb(62, 54, 63);
+        text-align:center;
+      }
+      form {
+          font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+          color: black;
+          margin-left: 38%;
+      }
+      button {
+          font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+          color:black;
+          
+      }
+      a {
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color:rgb(4, 17, 17);
+        font:bolder;
+      }
+      div {
+        margin-left: 30%;
+      }
+      .linea {
+        font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        font-size: 20px;
+        margin-left: 25%;
+      }
+      .lhead {
+        font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        font-size: 14px;
+        text-align:right;        
+      }
+      strong {
+        color:black;
+        margin-left: -43%;
+        font:normal;
+      }
+      textarea {
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        margin-left: -30%;
+      }
+      ul {
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color:black;
+      }
+
+      </style>
+
+    <meta charset="utf-8">
+    <title>{% block title %}Practica 1{% endblock %}</title>
+  </head>
+  <body >
+      <header>
+          <h3>Práctica 2</h3>
+          {% block header %}
+
+          {% endblock %}
+          <hr>
+        </header>
+    <main>
+      {% block content %}
+
+      {% endblock %}
+    </main>
+  </body>
+</html>

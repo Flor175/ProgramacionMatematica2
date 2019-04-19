@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar Archivo{% endblock %}
+<header>
+        {% block header %}
+          <p class="lhead"><a href="{% url 'archivos_subidos' %}">Regresar</a></p>
+          <p class="lhead"><a href="{% url 'sign_out' %}">Cerrar Sesión</a></p>
+        {% endblock %}
+        </header>
+{% block content %}
+<h1>Editar Archivo   </h1>
+<p>El archivo  {{ id_a }} dice:  </p> <br>
+<form action="{% url 'guardar' %}"  method="post" >
+    {% csrf_token %}
+    <textarea  name="texto" value="" rows="25" cols="100" >{{ contenido}}</textarea><br>
+    <input hidden type="text" name="id_ar" value="{{ id_a}}"  ><br>
+    <button type="submit">Guardar</button>
+
+</form>
+<form action="{% url 'analizar' %}"  method="post" >
+        {% csrf_token %}
+        <textarea  hidden name="texto" value="" rows="25" cols="100" >{{ contenido}}</textarea><br>
+        <input hidden type="text" name="id_ar" value="{{ id_a}}"  ><br>
+        <button type="submit">Analizar</button>
+    
+    </form>
+{% endblock content %} 
